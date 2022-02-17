@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-5" *ngFor="let v of video">
+            <div class="card" style="width: 18rem;">
+                <img [src]="v.photo" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ v.vName }} </h5>
+                  <p class="card-text"> {{ v.desc }} </p>
+                  <a class="btn btn-primary" (click)="likeCounter(v)">Like</a> {{ v.like }} &nbsp; &nbsp;<a class="btn btn-danger" (click)="dislikeCounter(v)" >Dislike</a> {{ v.dislike }}
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
